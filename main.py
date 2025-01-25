@@ -7,9 +7,9 @@ c:  True
 d:  False
 e:  True
 f:  False
-g:  False
+g:  True   (corrected)
 h:  True
-i:  False
+i:  True   (corrected)
 '''
 
 ##################################################
@@ -19,13 +19,13 @@ a:  y > 0
 b:  z != 0
 c:  y > z
 d:  z >= 0
-e:  x - y > z - y
+e:  abs(y - x) < abs(y - z)    (corrected)
 f:  z % 2 != 0
 g:  x % 2 == 0
 h:  y % z == 0
-i:  y > 9
-j:  0 - x != 0 - z
-k:  (x % 2 == 0 and y % 2 != 0) or (x % 2 != 0 and y % 2 == 0)
+i:  y >= 0 and y < 10    (corrected)       
+j:  x == -z
+k:  (x % 2 == 0 and y % 2 != 0) or (x % 2 != 0 and y % 2 == 0) | x * y % 2 == 0 and (x + y) % 2 != 0   (corrected)
 '''
 
 ##################################################
@@ -36,7 +36,7 @@ Q3:
 number = int(input('Give me a number: '))
 
 if number % 2 == 0:
-    if number % 3 == 0 and number % 2 == 0:
+    if number % 3 == 0:      
         print("Divisible by 6.")
 else:
     print("Odd number.")
